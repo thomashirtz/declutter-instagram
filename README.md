@@ -29,17 +29,17 @@ After installing the library, you need to do the following steps:
 ### 1. Request your instagram data
 
 Via the browser :   
-``Settings`` => ``Privacy and Security`` => ``Data Download`` => ``Request Download`` => ``JSON`` => ``Next`` => ``Request Download``  
-Wait that the link is available (in your email inbox)  
+``Settings`` => ``Privacy and Security`` => ``Data Download`` => ``Request Download`` => ``JSON`` => ``Next`` => ``Request Download``   
 
-Via the App :
+Via the App :  
 ``Settings`` => Search "Download" => ``Download Information`` => ``Request Download`` 
 
 [Guide](https://help.instagram.com/181231772500920) on the official instagram website.
 
 ### 2. Download your data
 
-Download the instagram information via the email obtained in your email inbox.
+After having done the first step, wait that the link is available in your email inbox.   
+Then download the instagram information using the link provided in the email received.
 
 ### 3. Use the tool
 
