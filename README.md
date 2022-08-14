@@ -10,7 +10,7 @@ This is helpful if someone wants to refine its feed page to contain mostly close
 
 
 ```
-pip install git+https://github.com/thomashirtz/declutter-instagram#egg=declutter-instagram
+pip install git+https://github.com/thomashirtz/instagram-refiner#egg=instagram-refiner
 ```
 You can now call the application using `instagram-refiner` or `ir`
 
