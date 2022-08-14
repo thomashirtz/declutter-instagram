@@ -48,9 +48,11 @@ Using the command prompt, run the command:
 instagram-refiner path_to_the_file
 ```
 
-It will output the list of the account you follow and are not following back:
+It will output the list of the account you follow and are not following back, example with the `example.zip` file provided:
 ```
+instagram-refiner example.zip
 
+0 - natgeo - https://www.instagram.com/natgeo
 ```
 
 ## Buy me a coffee ツ
