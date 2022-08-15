@@ -18,28 +18,42 @@ def get_account_name(raw_entry: Dict[str, Any]) -> str:
 
 
 def analyze_zipfile(filepath: str) -> int:
+    """Function that analyse an Instagram data dump in order to print the
+    account that are not following back.
+
+    Args:
+        filepath: path to the instagram archive.
+    """
+
+    # Open the archive and read the file needed.
     with zipfile.ZipFile(filepath) as z:
         with z.open('followers_and_following/followers.json') as f:
             raw_followers_list = load(f)['relationships_followers']
-            followers_list = list(map(get_account_name, raw_followers_list))
         with z.open('followers_and_following/following.json') as f:
             raw_following_list = load(f)['relationships_following']
-            following_list = list(map(get_account_name, raw_following_list))
 
-    index = 0
-    for following in following_list:
-        if following not in followers_list:
-            print(f'{index} - {following} - https://www.instagram.com/{following}')
-            index += 1
+    # Preprocess the accounts information.
+    followers_list = list(map(get_account_name, raw_followers_list))
+    following_list = list(map(get_account_name, raw_following_list))
+
+    # Take the set difference, in order to find the account that are not following back.
+    account_list = set(following_list) - set(followers_list)
+    for index, account in enumerate(account_list):
+        print(f'{index} - {account} - https://www.instagram.com/{account}')
     return 0
 
 
 def main() -> int:
+    """Main function acting as the entry point. It contains the parser as
+    well as the code to execute the `analyze_zipfile` function.
+    """
+    # Create a parser to give the user an interface to interact with.
     parser = argparse.ArgumentParser()
     parser.add_argument('filepath', help="Path of the instagram zip file.")
     args = parser.parse_args()
     filepath = Path(args.filepath)
 
+    # Execute the main function if the file exists.
     if filepath.is_file():
         return analyze_zipfile(filepath=filepath)
     else:
