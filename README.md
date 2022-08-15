@@ -1,10 +1,11 @@
 # instagram-refiner
 
 This repository is a tool that can analyze the data from instagram in order to
-spot follower accounts that are not following back.
+spot follower accounts that are not following back. It aims to help people that 
+wants to refine their feed page to contain mostly closer friends (Since this 
+method will spot influencers, corporate accounts and else, as they generally do
+not follow back).
 
-This is helpful if someone wants to refine its feed page to contain mostly closer friends 
-(Since this method will spot influencers, corporate accounts and else, as they generally does not follow back.) 
 
 ## Installation
 
@@ -12,7 +13,7 @@ This is helpful if someone wants to refine its feed page to contain mostly close
 ```
 pip install git+https://github.com/thomashirtz/instagram-refiner#egg=instagram-refiner
 ```
-You can now call the application using `instagram-refiner` or `ir`
+You can now call the application using `instagram-refiner`
 
 <details><summary>Never used python nor github before ?</summary>
 
