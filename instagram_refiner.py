@@ -5,33 +5,31 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 
-def format_output(name: str, index: int) -> str:
-    return f'{index} - {name} - https://www.instagram.com/{name}'
+def get_account_name(raw_entry: Dict[str, Any]) -> str:
+    """Function that can process a raw JSON instagram account entry.
+    
+    Args:
+        raw_entry: Raw JSON instagram account entry 
 
-
-def parse_raw_list(raw_list: List[Dict[str, Any]]) -> List[str]:
-    new_list = []
-    for entry in raw_list:
-        try:
-            new_list.append(entry['string_list_data'][0]['value'])
-        except KeyError or IndexError:
-            print(f'Error while parsing "{entry}"')
-    return new_list
+    Returns:
+        The name of the instagram account.
+    """
+    return raw_entry['string_list_data'][0]['value']
 
 
 def analyze_zipfile(filepath: str) -> int:
     with zipfile.ZipFile(filepath) as z:
         with z.open('followers_and_following/followers.json') as f:
             raw_followers_list = load(f)['relationships_followers']
-            followers_list = parse_raw_list(raw_list=raw_followers_list)
+            followers_list = list(map(get_account_name, raw_followers_list))
         with z.open('followers_and_following/following.json') as f:
             raw_following_list = load(f)['relationships_following']
-            following_list = parse_raw_list(raw_list=raw_following_list)
+            following_list = list(map(get_account_name, raw_following_list))
 
     index = 0
     for following in following_list:
         if following not in followers_list:
-            print(format_output(name=following, index=index))
+            print(f'{index} - {following} - https://www.instagram.com/{following}')
             index += 1
     return 0
 
