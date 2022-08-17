@@ -2,19 +2,6 @@ import argparse
 import zipfile
 from json import load
 from pathlib import Path
-from typing import Any, Dict
-
-
-def get_account_name(raw_entry: Dict[str, Any]) -> str:
-    """Function that can process a raw JSON instagram account entry.
-    
-    Args:
-        raw_entry: Raw JSON instagram account entry.
-
-    Returns:
-        The name of the instagram account.
-    """
-    return raw_entry['string_list_data'][0]['value']
 
 
 def analyze_zipfile(filepath: str) -> int:
@@ -28,16 +15,17 @@ def analyze_zipfile(filepath: str) -> int:
     # Open the archive and read the file needed.
     with zipfile.ZipFile(filepath) as z:
         with z.open('followers_and_following/followers.json') as f:
-            raw_followers_list = load(f)['relationships_followers']
+            raw_follower_list = load(f)['relationships_followers']
         with z.open('followers_and_following/following.json') as f:
             raw_following_list = load(f)['relationships_following']
 
     # Preprocess the accounts information.
-    followers_list = list(map(get_account_name, raw_followers_list))
-    following_list = list(map(get_account_name, raw_following_list))
+    get_account_name = lambda entry: entry['string_list_data'][0]['value']  # noqa: E731
+    follower_list = [get_account_name(follower) for follower in raw_follower_list]
+    following_list = [get_account_name(following) for following in raw_following_list]
 
     # Take the set difference, in order to find the account that are not following back.
-    account_list = list(set(following_list) - set(followers_list))
+    account_list = list(set(following_list) - set(follower_list))
     for index, account in enumerate(account_list):
         print(f'{index} - {account} - https://www.instagram.com/{account}')
     return 0

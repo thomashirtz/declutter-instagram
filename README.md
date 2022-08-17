@@ -1,7 +1,9 @@
-# instagram-refiner
+# instagram-cleaner
 
 This repository is a tool that can analyze the data from instagram in order to
-spot follower accounts that are not following back. It aims to help people that 
+spot follower accounts that are not following back.  
+
+It aims to help people that 
 wants to refine their feed page to contain mostly closer friends (Since this 
 method will spot influencers, corporate accounts and else, as they generally do
 not follow back).
@@ -11,9 +13,9 @@ not follow back).
 
 
 ```
-pip install git+https://github.com/thomashirtz/instagram-refiner#egg=instagram-refiner
+pip install git+https://github.com/thomashirtz/instagram-cleaner#egg=instagram-cleaner
 ```
-You can now call the application using `instagram-refiner`
+You can now call the application using `instagram-cleaner`
 
 <details><summary>Never used python nor github before ?</summary>
 
@@ -30,7 +32,7 @@ After installing the library, you need to do the following steps:
 ### 1. Request your instagram data
 
 Via the browser :   
-``Settings`` => ``Privacy and Security`` => ``Data Download`` => ``Request Download`` => ``JSON`` => ``Next`` => ``Request Download``   
+``Settings`` 🡆 ``Privacy and Security`` 🡆 ``Data Download`` 🡆 ``Request Download`` 🡆 ``JSON`` 🡆 ``Next`` 🡆 ``Request Download``   
 
 [Guide](https://help.instagram.com/181231772500920) on the official instagram website.
 
@@ -45,12 +47,12 @@ Then download the instagram information using the link provided in the email rec
 
 Using the command prompt, run the command:
 ```
-instagram-refiner path_to_the_file
+instagram-cleaner path_to_the_file
 ```
 
 It will output the list of the account you follow and are not following back, example with the `example.zip` file provided:
 ```
-instagram-refiner example.zip
+instagram-cleaner example.zip
 
 0 - natgeo - https://www.instagram.com/natgeo
 ```
@@ -78,3 +80,11 @@ If this repository helped you or you if you like this project, feel free to supp
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
+
+## Miscellaneous
+
+Sentences to improve the indexing of the repository in search engine:  
+ * How to find and unfollow Instagram users who don’t follow you back ？
+ * How to see who doesn't follow you back on Instagram ？
+ * How to discover who doesn't follow you back on Instagram ？
+ * How to unfollow Instagram users who don't follow you back ？
