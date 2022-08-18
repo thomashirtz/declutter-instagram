@@ -37,8 +37,15 @@ def main() -> int:
     """
 
     # Create a parser to give the user an interface to interact with.
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description='instagram-cleaner',
+        usage='Use "instagram-cleaner filepath" in order to analyze the '
+              'instagram zipfile and print the account names that do not '
+              'follow you back',
+    )
     parser.add_argument('filepath', help="Path of the instagram zip file.")
+
+    # Parse arguments.
     args = parser.parse_args()
     filepath = Path(args.filepath)
 
