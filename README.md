@@ -32,7 +32,7 @@ After installing the library, you need to do the following steps:
 ### 1. Request your instagram data
 
 Via the browser :   
-``Settings`` 🡆 ``Privacy and Security`` 🡆 ``Data Download`` 🡆 ``Request Download`` 🡆 ``JSON`` 🡆 ``Next`` 🡆 ``Request Download``   
+``Settings`` > ``Privacy and Security`` > ``Data Download`` > ``Request Download`` > ``JSON`` > ``Next`` > ``Request Download``   
 
 [Guide](https://help.instagram.com/181231772500920) on the official instagram website.
 
@@ -83,7 +83,7 @@ If this repository helped you or you if you like this project, feel free to supp
 
 ## Miscellaneous
 
-Sentences to improve the indexing of the repository in search engine:  
+Sentences to improve the indexing of the repository by search engines:  
  * How to find and unfollow Instagram users who don’t follow you back ？
  * How to see who doesn't follow you back on Instagram ？
  * How to discover who doesn't follow you back on Instagram ？
