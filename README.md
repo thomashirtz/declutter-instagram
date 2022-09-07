@@ -32,9 +32,14 @@ After installing the library, you need to do the following steps:
 ### 1. Request your instagram data
 
 Via the browser :   
-``Settings`` > ``Privacy and Security`` > ``Data Download`` > ``Request Download`` > ``JSON`` > ``Next`` > ``Request Download``   
+1. Click on your profile picture on the top right.
+2. Go to ``Settings``
+3. Enter the submenu ``Privacy and Security``
+4. In the ``Data Download`` section, press on ``Request Download``
+5. In the ``Get a Copy of Your Information`` page, choose the ``JSON`` format, and press ``Next``
+6. Enter your password and ``Request Download``   
 
-[Guide](https://help.instagram.com/181231772500920) on the official instagram website.
+The [Guide](https://help.instagram.com/181231772500920) is avalaible on the official instagram website.
 
 Note that it is not possible to do this via the android/IOS application, as it will automatically choose the HTML version of the data, and the tool need the JSON version.
 
