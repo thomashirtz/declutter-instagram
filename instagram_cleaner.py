@@ -20,7 +20,9 @@ def analyze_zipfile(filepath: str) -> int:
             raw_following_list = load(f)['relationships_following']
 
     # Preprocess the accounts information.
-    get_account_name = lambda entry: entry['string_list_data'][0]['value']  # noqa: E731
+    def get_account_name(entry):
+        return entry['string_list_data'][0]['value']
+
     follower_list = [get_account_name(follower) for follower in raw_follower_list]
     following_list = [get_account_name(following) for following in raw_following_list]
 
@@ -43,7 +45,7 @@ def main() -> int:
               'instagram zipfile and print the account names that do not '
               'follow you back',
     )
-    parser.add_argument('filepath', help="Path of the instagram zip file.")
+    parser.add_argument('filepath', help='Path of the instagram zip file.')
 
     # Parse arguments.
     args = parser.parse_args()
