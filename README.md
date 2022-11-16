@@ -1,10 +1,10 @@
 # instagram-cleaner
 
 This repository is a tool that can analyze the data from instagram in order to
-spot follower accounts that are not following back.  
+spot follower accounts that are not following back.
 
-It aims to help people that 
-wants to refine their feed page to contain mostly closer friends (Since this 
+It aims to help people that
+wants to refine their feed page to contain mostly closer friends (Since this
 method will spot influencers, corporate accounts and else, as they generally do
 not follow back).
 
@@ -31,13 +31,13 @@ After installing the library, you need to do the following steps:
 
 ### 1. Request your instagram data
 
-Via the browser :   
+Via the browser :
 1. Click on your profile picture on the top right.
 2. Go to ``Settings``
 3. Enter the submenu ``Privacy and Security``
 4. In the ``Data Download`` section, press on ``Request Download``
 5. In the ``Get a Copy of Your Information`` page, choose the ``JSON`` format, and press ``Next``
-6. Enter your password and ``Request Download``   
+6. Enter your password and ``Request Download``
 
 The [Guide](https://help.instagram.com/181231772500920) is avalaible on the official instagram website.
 
@@ -45,7 +45,7 @@ Note that it is not possible to do this via the android/IOS application, as it w
 
 ### 2. Download your data
 
-After having done the first step, wait that the link is available in your email inbox.   
+After having done the first step, wait that the link is available in your email inbox.
 Then download the instagram information using the link provided in the email received.
 
 ### 3. Use the tool
@@ -64,7 +64,7 @@ instagram-cleaner example.zip
 
 ## Buy me a coffee ツ
 
-If this repository helped you or you if you like this project, feel free to support me!  
+If this repository helped you or you if you like this project, feel free to support me!
 
 <a href="https://www.paypal.com/donate/?hosted_button_id=2KQR9V6PRSBPC">
   <img src="https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png" alt="Donate with PayPal" width="180" />
@@ -88,7 +88,7 @@ If this repository helped you or you if you like this project, feel free to supp
 
 ## Miscellaneous
 
-Sentences to improve the indexing of the repository by search engines:  
+Sentences to improve the indexing of the repository by search engines:
  * How to find and unfollow Instagram users who don’t follow you back ？
  * How to see who doesn't follow you back on Instagram ？
  * How to discover who doesn't follow you back on Instagram ？
